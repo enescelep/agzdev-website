@@ -1,7 +1,13 @@
-'use client';
-
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
+
+import maqasigLogo from '@/assets/images/maqasid.png';
+import ethisLogo from '@/assets/images/ethis.png';
+import giaquaLogo from '@/assets/images/giaqua.png';
+
+
+
 
 const HeroSection = () => {
   return (
@@ -55,9 +61,15 @@ const HeroSection = () => {
             <p className="text-sm uppercase tracking-wider mb-4">Trusted by Leading Businesses in the MENA & GCC Markets</p>
             <div className="flex justify-center items-center space-x-8">
               {/* Add client logos here */}
-              <div className="h-12 w-24 bg-gray-200 rounded-md"></div>
-              <div className="h-12 w-24 bg-gray-200 rounded-md"></div>
-              <div className="h-12 w-24 bg-gray-200 rounded-md"></div>
+              <div className="h-12 w-24 bg-gray-200 rounded-md">
+                <Image src={maqasigLogo} alt="Maqasid Logo" layout="fill" objectFit="contain" />
+              </div>
+              <div className="h-12 w-24 bg-gray-200 rounded-md">
+                <Image src={ethisLogo} alt="Ethis Logo" layout="fill" objectFit="contain" />
+              </div>
+              <div className="h-12 w-24 bg-gray-200 rounded-md">
+                <Image src={giaquaLogo} alt="Giaqua Logo" layout="fill" objectFit="contain" />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -69,4 +81,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection; 
+export default HeroSection;
