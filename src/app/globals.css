@@ -1,0 +1,40 @@
+@tailwind;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-end-rgb));
+  font-family: Montserrat, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  min-height: 200vh; /* Ensure scrolling is possible */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.navbar-scroll {
+  @apply bg-white shadow-sm z-50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Add scroll behavior */
+@media (min-width: 768px) {
+  .navbar-scroll.scrolled {
+    transform: translateY(-100%);
+  }
+}
